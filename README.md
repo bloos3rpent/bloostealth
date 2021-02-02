@@ -4,7 +4,7 @@ Plant it in any PHP file. Totally not *sus*
 ## Installation
 
 ```bash
-wget https://github.com/bloos3rpent/Bloos3rpentStealth
+wget https://github.com/bloos3rpent/Bloos3rpentStealth && cd Bloos3rpentStealth
 ```
 
 ## Usage
