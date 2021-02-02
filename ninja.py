@@ -40,6 +40,8 @@ def main():
         print("")
         print(bcolors.FAIL + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
         main()
+    elif not cmd:
+        main()
     else :
         r=requests.get(target, headers={"Referer":cmd})
         for c in r.cookies:
