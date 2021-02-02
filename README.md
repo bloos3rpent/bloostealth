@@ -32,5 +32,8 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 
 Please make sure to update tests as appropriate.
 
+## Waiver
+I am NOT responsible to any misusage of this. Only do this with consent
+
 ## License
 [Bloos3rpent](https://github.com/bloos3rpent)
