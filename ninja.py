@@ -41,7 +41,7 @@ def main():
         print(bcolors.FAIL + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
         main()
     elif cmd == "exit":
-        exit()
+        exit(0)
     elif not cmd:
         main()
     else:
