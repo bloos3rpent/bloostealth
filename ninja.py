@@ -35,7 +35,7 @@ print(bcolors.WARNING + '''
 
 def main():
     print("")
-    cmd = input(bcolors.WARNING + "bloostealth@" + domain + bcolors.ENDC + " :" + bgcolors.OKBLUE + "~" + bcolors.ENDC + "$ ")
+    cmd = input(bcolors.WARNING + "bloostealth@" + domain + bcolors.ENDC + " :" + bcolors.OKBLUE + "~" + bcolors.ENDC + "$ ")
     if cmd == "su":
         print("")
         print(bcolors.WARNING + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
