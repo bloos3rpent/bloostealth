@@ -9,6 +9,9 @@ $ sudo apt-get install python3-urllib3
 $ git clone https://github.com/bloos3rpent/bloostealth && cd bloostealth
 ```
 
+## Disclaimer
+Only works if `shell_exec()` function isn't disabled
+
 ## Usage
 
 Upload `ninja.php` in the server OR insert the ff. php code anywhere in a PHP file.
