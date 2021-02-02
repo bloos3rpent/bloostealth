@@ -30,7 +30,7 @@ print(bcolors.FAIL + '''
  \   \ .'   |   ,/      `---'.|     
   `---`     '---'         `---`     
   
-  stealth shell
+  stealth shell 
 ''' + bcolors.ENDC)
 
 def main():
@@ -40,6 +40,8 @@ def main():
         print("")
         print(bcolors.FAIL + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
         main()
+    elif cmd == "exit":
+        exit()
     elif not cmd:
         main()
     else:
@@ -53,6 +55,9 @@ def main():
 
 
 target = input("Target site (http://xxxxx.com/ninja.php) > ")
+print('(type exit to exit)')
+print('')
 parsed_uri = urlparse(target)
 domain = '{uri.netloc}'.format(uri=parsed_uri)
+
 main()
