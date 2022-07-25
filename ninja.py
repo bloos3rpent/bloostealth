@@ -36,7 +36,7 @@ print(bcolors.FAIL + '''
 def main():
     print("")
     getcwd()
-    cmd = input(f"${bcolors.FAIL}${user}@${hostname}${bcolors.ENDC}:${bcolors.OKBLUE}${cwd}${bcolors.FAIL}$ ")
+    cmd = input(f"{bcolors.FAIL}{user}@{hostname}{bcolors.ENDC}:{bcolors.OKBLUE}{cwd}{bcolors.FAIL}$ ")
     if cmd == "su":
         print("")
         print(bcolors.FAIL + "Bloos3rpent > You Need to BackConnect First!" + bcolors.ENDC)
